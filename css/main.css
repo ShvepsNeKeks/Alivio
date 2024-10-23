@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+Georgian:wdth,wght@62.5..100,100..900&display=swap');
+
+
+:root {
+  --color-gray: #484848;
+  --color-green: #01996D;
+  --color-black: #292929;
+
+  --font-geo: font-family:"Noto Serif Georgian", serif;
+  --font-lato: font-family: "Lato", sans-serif;
+}
+
+
+/* Мульти-блоки */
+.text-style-small {
+  color: var(--color-gray);
+  font-family: var(--font-lato);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 157%;
+}
+
+
+/* Шапка и навигация */
+.nav {
+}
+.nav__container {
+}
+.main-container {
+}
+.header__logo {
+}
+.nav__list {
+}
+.nav__list-item {
+}
+.nav__list-link {
+}
+.text-style-small {
+}
+.nav__wrapper-btn {
+}
+.nav__link-sign-in {
+}
+.nav__btn {
+}
+.header {
+}
+.header__container {
+}
+.header__title {
+}
+.header__text {
+}
+.header__btn {
+}
