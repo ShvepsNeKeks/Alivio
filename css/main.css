@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+Georgian:wdth,wght@62.5..100,100..900&display=swap');
 
+body {
+  overflow-x: hidden;
+}
 
 :root {
   --color-gray: #484848;
   --color-green: #01996D;
   --color-black: #292929;
   --color-white: #fff;
+  --color-dark: #000;
+  --color-about-digit: rgba(1, 153, 109, 0.20);
 
   --font-geo: font-family:"Noto Serif Georgian", serif;
   --font-lato: font-family: "Lato", sans-serif;
@@ -15,6 +20,7 @@
   --time-trans: 1.2s;
   --border-rad: 5px;
   --pg-mob: 25px;
+  --animation-time: 3s;
 }
 
 
@@ -29,6 +35,13 @@
   font-family: var(--font-lato);
   font-size: 20px;
   font-weight: 400;
+  line-height: 157%;
+}
+
+.text-style-medium {
+  font-family: var(--font-geo);
+  font-size: 50px;
+  font-weight: 700;
   line-height: 157%;
 }
 
@@ -75,8 +88,6 @@
   gap: 60px;
 }
 
-.nav__list-item {}
-
 .nav__list-link {
   display: inline-block;
   padding: 10px 20px;
@@ -118,8 +129,6 @@
   min-height: 895px;
 }
 
-.header__container {}
-
 .header__wrapper {
   padding-top: 175px;
   max-width: 440px;
@@ -136,4 +145,168 @@
 
 .header__text {
   margin-bottom: 46px;
+}
+
+
+/* Описание */
+.about {
+  padding-top: 207px;
+  padding-bottom: 50px;
+}
+
+.about__container {}
+
+.about__wrapper-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 136px;
+}
+
+.about__title {
+  position: relative;
+  color: var(--color-green);
+  min-width: 585px;
+}
+
+.about__title::before {
+  content: 'How it works';
+  position: absolute;
+  left: 0;
+  top: -35px;
+  font-family: var(--font-lato);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 157%;
+  color: var(--color-gray);
+}
+
+.about__text {
+}
+
+.about__card-box {
+  padding-top: 400px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about__card-animation:nth-child(odd) {
+  animation-name: ascent-up;
+  animation-duration: var(--animation-time);
+  animation-fill-mode: both;
+}
+
+.about__card-animation:nth-child(even) {
+  animation-name: ascent-down;
+  animation-duration: var(--animation-time);
+  animation-fill-mode: both;
+}
+
+@keyframes ascent-down {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes ascent-up {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-250px);
+  }
+}
+
+@keyframes mob-anim-left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes mob-anim-right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 390px;
+  gap: 55px;
+}
+
+.card__title {
+  display: inline-flex;
+  color: var(--color-dark);
+  text-align: center;
+  font-family: var(--font-geo);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  position: relative;
+}
+
+.card__title::before {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: -100px;
+  text-align: center;
+  font-family: var(--font-geo);
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--color-about-digit);
+}
+
+.about__card:nth-child(1) .card__title::before {
+  content: '01';
+}
+
+.about__card:nth-child(2) .card__title::before {
+  content: '02';
+}
+
+.about__card:nth-child(3) .card__title::before {
+  content: '03';
+}
+
+
+
+.card__text {}
+
+.card__picture {
+  min-width: 100%;
+  min-height: 492px;
+  position: relative;
+  border-radius: 12px;
+}
+
+.card__min-picture {
+  min-width: 185px;
+  min-height: 148px;
+  position: absolute;
+  top: 222.5px;
+  right: 0;
 }

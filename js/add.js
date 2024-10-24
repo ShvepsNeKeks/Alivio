@@ -1,7 +1,12 @@
-const options = {
-  root: document.querySelector(""),
-  rootMargin: "0px",
-  threshold: 1.0,
-};
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('about__card-animation');
+    }
+  });
+});
 
-const observer = new IntersectionObserver(callback, options);
+const cards = document.querySelectorAll('.about__card');
+cards.forEach(card => {
+  observer.observe(card);
+});
