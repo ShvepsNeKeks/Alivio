@@ -227,6 +227,7 @@ body {
 
 @keyframes mob-anim-left {
   0% {
+    opacity: 0;
     transform: translateX(-200px);
   }
 
@@ -238,6 +239,7 @@ body {
 
 @keyframes mob-anim-right {
   0% {
+    opacity: 0;
     transform: translateX(200px);
   }
 
