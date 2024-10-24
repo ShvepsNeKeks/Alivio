@@ -256,7 +256,6 @@ body {
   align-items: center;
   max-width: 390px;
   gap: 55px;
-  opacity: 0;
 }
 
 .card__title {
