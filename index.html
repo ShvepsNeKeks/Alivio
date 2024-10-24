@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alivio</title>
   <meta name="author" content="Дмитрий.А">
+  <script src="js/add.js" defer></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/media.css">
@@ -16,7 +17,7 @@
   <nav class="nav">
     <div class="nav__container main-container">
       <a href="#" class="header__logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="81" height="24" viewBox="0 0 81 24" fill="none">
+        <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" width="81" height="24" viewBox="0 0 81 24" fill="none">
           <path
             d="M10.15 1.76007H14.02L23.26 23.0001H17.98L16.15 18.5001H7.89997L6.12997 23.0001H0.969971L10.15 1.76007ZM11.95 7.94007L9.36997 14.5401H14.56L11.95 7.94007Z"
             fill="#01996D" />
@@ -36,11 +37,11 @@
         </svg>
       </a>
 
-      <ul class="nav__list main-container">
+      <ul class="nav__list">
         <li class="nav__list-item">
           <a href="" class="nav__list-link text-style-small">Why Alivio</a>
         </li>
-        <li class="nav__list-item">
+        <li class="nav__list-item" >
           <a href="" class="nav__list-link text-style-small">Solutions</a>
         </li>
         <li class="nav__list-item">
@@ -53,21 +54,24 @@
 
       <div class="nav__wrapper-btn">
         <a href="#" class="nav__link-sign-in text-style-small">Sign in</a>
-        <button class="nav__btn text-style-small">Start Trial</button>
+        <button class="nav__btn hero-btn">Start Trial</button>
       </div>
     </div>
   </nav>
 
-  <header class="header">
+  <header class="header" style="background: url(img/bgc-header.png)no-repeat 60% 25%/cover;">
     <div class="header__container main-container">
-      <h1 class="header__title">Be aware, 
-        Manage well.</h1>
-      <p class="header__text text-style-small">Everyone experiences stress in different ways.
-        Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
-      <button class="header__btn text-style-small">Find Your Way</button>
+      <div class="header__wrapper">
+        <h1 class="header__title">Be aware,
+          Manage well.</h1>
+        <p class="header__text text-style-small">Everyone experiences stress in different ways.
+          Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
+        <button class="header__btn hero-btn">Find Your Way</button>
+      </div>
     </div>
   </header>
 
+  
 </body>
 
 </html>
