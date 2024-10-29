@@ -24,7 +24,6 @@ body {
   --animation-time: 3s;
 }
 
-
 /* Мульти-блоки */
 .main-container {
   max-width: 1370px;
@@ -40,6 +39,7 @@ body {
 }
 
 .text-style-medium {
+  color: var(--color-green);
   font-family: var(--font-geo);
   font-size: 50px;
   font-weight: 700;
@@ -63,7 +63,6 @@ body {
   transform: scale(var(--trm-scale));
   box-shadow: 0 0 7px var(--color-gray);
 }
-
 
 /* Шапка и навигация */
 .nav__container {
@@ -103,7 +102,6 @@ body {
   background-color: var(--color-green);
   color: var(--color-white);
 }
-
 
 .nav__wrapper-btn {
   display: flex;
@@ -148,7 +146,6 @@ body {
   margin-bottom: 46px;
 }
 
-
 /* Описание */
 .about {
   padding-top: 207px;
@@ -164,7 +161,6 @@ body {
 
 .about__title {
   position: relative;
-  color: var(--color-green);
   min-width: 585px;
 }
 
@@ -309,33 +305,123 @@ body {
 
 .history__container {
   margin-inline: auto;
-  /* padding: 0 var(--pg-mob); */
   gap: 20px;
   max-width: 1505px;
   display: flex;
   justify-content: space-between;
 }
+
 .history__text-inner {
   padding-top: 55px;
   color: var(--color-white);
 }
+
 .history__title {
+  color: inherit;
   margin-bottom: 33px;
   max-width: 580px;
 }
+
 .history__text {
   margin-bottom: 1.71vw;
   color: inherit;
 }
-.history__btn {
-}
+
 .history__video-inner {
   max-width: 895px;
 }
+
 .history__video {
   max-width: 100%;
 }
+
 .history__video-alternative {
   text-align: center;
   color: var(--color-dark);
+}
+
+/* Продукты */
+.product {
+  padding-top: 120px;
+  padding-bottom: 12.5vh;
+}
+
+.product__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__img-inner {
+  position: relative;
+  min-width: 540px;
+  min-height: 573px;
+}
+
+.product__img-card {
+  position: absolute;
+  top: 354px;
+  left: -61px;
+  max-width: 296px;
+}
+
+.product__text-inner {
+  max-width: 584px;
+}
+
+.product__title {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.product__title::before {
+  content: 'Our product';
+  position: absolute;
+  font-family: var(--font-lato);
+  top: -25px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 157%;
+  color: var(--color-gray);
+}
+
+.product__text {
+  margin-bottom: 40px;
+}
+
+/* Подвал */
+.footer {
+  padding: 95px 0 144px;
+  background-color: var(--dark-green);
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.footer__item-list:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.footer__link {
+  display: inline-block;
+  position: relative;
+  color: var(--color-white);
+}
+
+.footer__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: width var(--time-trans);
+}
+
+.footer__link:hover::after {
+  width: 100%;
 }

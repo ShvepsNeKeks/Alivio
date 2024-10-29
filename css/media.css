@@ -39,7 +39,14 @@
   .history__text-inner {
     padding-top: 0;
   }
+  .product__container {
+    flex-direction: column;
+    gap: 150px;
+  }
 
+  .product__img-inner {
+    min-width: 33.2vw;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -64,7 +71,6 @@
   }
 }
 
-
 @media screen and (max-width: 750px) {
   .nav__wrapper-btn {
     order: -1;
@@ -84,4 +90,5 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
 }
