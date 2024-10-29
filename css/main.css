@@ -11,9 +11,10 @@ body {
   --color-white: #fff;
   --color-dark: #000;
   --color-about-digit: rgba(1, 153, 109, 0.20);
+  --dark-green: #245852;
 
-  --font-geo: font-family:"Noto Serif Georgian", serif;
-  --font-lato: font-family: "Lato", sans-serif;
+  --font-geo: "Noto Serif Georgian", serif;
+  --font-lato: "Lato", sans-serif;
 
   --index: calc(1vw + 1vh);
   --trm-scale: 1.05;
@@ -131,7 +132,7 @@ body {
 
 .header__wrapper {
   padding-top: 175px;
-  max-width: 440px;
+  max-width: 550px;
 }
 
 .header__title {
@@ -153,8 +154,6 @@ body {
   padding-top: 207px;
   padding-bottom: 50px;
 }
-
-.about__container {}
 
 .about__wrapper-title {
   display: flex;
@@ -181,9 +180,6 @@ body {
   color: var(--color-gray);
 }
 
-.about__text {
-}
-
 .about__card-box {
   padding-top: 400px;
   display: flex;
@@ -206,6 +202,7 @@ body {
 @keyframes ascent-down {
   0% {
     transform: translateY(-100px);
+    opacity: 0;
   }
 
   100% {
@@ -217,6 +214,7 @@ body {
 @keyframes ascent-up {
   0% {
     transform: translateY(0);
+    opacity: 0;
   }
 
   100% {
@@ -294,10 +292,6 @@ body {
   content: '03';
 }
 
-
-
-.card__text {}
-
 .card__picture {
   min-width: 100%;
   min-height: 492px;
@@ -305,10 +299,43 @@ body {
   border-radius: 12px;
 }
 
-.card__min-picture {
-  min-width: 185px;
-  min-height: 148px;
-  position: absolute;
-  top: 222.5px;
-  right: 0;
+/* История */
+.history {
+  min-height: 920px;
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-green);
+}
+
+.history__container {
+  margin-inline: auto;
+  /* padding: 0 var(--pg-mob); */
+  gap: 20px;
+  max-width: 1505px;
+  display: flex;
+  justify-content: space-between;
+}
+.history__text-inner {
+  padding-top: 55px;
+  color: var(--color-white);
+}
+.history__title {
+  margin-bottom: 33px;
+  max-width: 580px;
+}
+.history__text {
+  margin-bottom: 1.71vw;
+  color: inherit;
+}
+.history__btn {
+}
+.history__video-inner {
+  max-width: 895px;
+}
+.history__video {
+  max-width: 100%;
+}
+.history__video-alternative {
+  text-align: center;
+  color: var(--color-dark);
 }

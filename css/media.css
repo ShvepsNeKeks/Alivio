@@ -14,6 +14,7 @@
   .about__card {
     min-width: 100%;
   }
+
   .card__text {
     text-align: center;
   }
@@ -28,6 +29,15 @@
     animation-name: mob-anim-left;
     animation-duration: var(--animation-time);
     animation-fill-mode: both;
+  }
+
+  .history__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history__text-inner {
+    padding-top: 0;
   }
 
 }
@@ -47,6 +57,10 @@
   .about__title {
     text-wrap: wrap;
     min-width: auto;
+  }
+
+  .history__container {
+    padding: 0 var(--pg-mob);
   }
 }
 
